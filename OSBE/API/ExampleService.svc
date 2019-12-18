@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="OSBE.API.ExampleService" CodeBehind="ExampleService.svc.cs" %>
