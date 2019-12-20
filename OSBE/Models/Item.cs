@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace OSBE.Models
+{
+    public class Item
+    {
+        public int ID { get; set; }
+
+        [Required]
+        [MaxLength(60)]
+        public string Name { get; set; }
+
+        [Required]
+        public double Cost { get; set; }
+
+        [Required]
+        [MaxLength(100)]
+        public string Descripition { get; set; }
+
+        [Required]
+        public string ImageURL { get; set; }
+
+        public Category Category { get; set; }
+        [Required]
+        public int CategoryID { get; set; }
+    }
+}
