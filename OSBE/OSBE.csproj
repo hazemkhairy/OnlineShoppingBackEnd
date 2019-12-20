@@ -81,16 +81,51 @@
     </Compile>
     <Compile Include="API\IExampleService.cs" />
     <Compile Include="BLL\ExampleBLL.cs" />
+    <Compile Include="Context\OSContext.cs" />
     <Compile Include="DTOs\ExampleClientDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912201656153_addedUsersTable.cs" />
+    <Compile Include="Migrations\201912201656153_addedUsersTable.designer.cs">
+      <DependentUpon>201912201656153_addedUsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201658011_addedCategoriesTable.cs" />
+    <Compile Include="Migrations\201912201658011_addedCategoriesTable.designer.cs">
+      <DependentUpon>201912201658011_addedCategoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201659402_addedItemsTable.cs" />
+    <Compile Include="Migrations\201912201659402_addedItemsTable.designer.cs">
+      <DependentUpon>201912201659402_addedItemsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201701528_addedPaymentTypesTable.cs" />
+    <Compile Include="Migrations\201912201701528_addedPaymentTypesTable.designer.cs">
+      <DependentUpon>201912201701528_addedPaymentTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201702586_addedOrdersTable.cs" />
+    <Compile Include="Migrations\201912201702586_addedOrdersTable.designer.cs">
+      <DependentUpon>201912201702586_addedOrdersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201704258_addedOrderItemsTable.cs" />
+    <Compile Include="Migrations\201912201704258_addedOrderItemsTable.designer.cs">
+      <DependentUpon>201912201704258_addedOrderItemsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912201719365_PopulatePaymentTypes.cs" />
+    <Compile Include="Migrations\201912201719365_PopulatePaymentTypes.designer.cs">
+      <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ExampleClient.cs" />
+    <Compile Include="Models\Item.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\PaymentType.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Context\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -100,6 +135,29 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201912201656153_addedUsersTable.resx">
+      <DependentUpon>201912201656153_addedUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201658011_addedCategoriesTable.resx">
+      <DependentUpon>201912201658011_addedCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201659402_addedItemsTable.resx">
+      <DependentUpon>201912201659402_addedItemsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201701528_addedPaymentTypesTable.resx">
+      <DependentUpon>201912201701528_addedPaymentTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201702586_addedOrdersTable.resx">
+      <DependentUpon>201912201702586_addedOrdersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201704258_addedOrderItemsTable.resx">
+      <DependentUpon>201912201704258_addedOrderItemsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912201719365_PopulatePaymentTypes.resx">
+      <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
