@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="API\CategoryService.svc" />
     <Content Include="API\ExampleService.svc" />
+    <Content Include="API\OrderService.svc" />
     <Content Include="API\ItemService.svc" />
     <Content Include="API\UserService.svc" />
     <Content Include="Global.asax" />
@@ -87,22 +88,35 @@
     </Compile>
     <Compile Include="API\ICategoryService.cs" />
     <Compile Include="API\IExampleService.cs" />
+    <Compile Include="API\IOrderService.cs" />
+
     <Compile Include="API\IItemService.cs" />
     <Compile Include="API\ItemService.svc.cs">
       <DependentUpon>ItemService.svc</DependentUpon>
     </Compile>
+
     <Compile Include="API\IUserService.cs" />
+    <Compile Include="API\OrderService.svc.cs">
+      <DependentUpon>OrderService.svc</DependentUpon>
+    </Compile>
     <Compile Include="API\UserService.svc.cs">
       <DependentUpon>UserService.svc</DependentUpon>
     </Compile>
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\ExampleBLL.cs" />
+
+    <Compile Include="BLL\OrderBLL.cs" />
+
     <Compile Include="BLL\ItemBLL.cs" />
+
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Context\OSContext.cs" />
     <Compile Include="DTOs\CategoryDTO.cs" />
     <Compile Include="DTOs\ExampleClientDTO.cs" />
+    <Compile Include="DTOs\OrderDTO.cs" />
+    <Compile Include="DTOs\PaymentTypeDTO.cs" />
     <Compile Include="DTOs\ItemDTO.cs" />
+
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -135,6 +149,13 @@
     <Compile Include="Migrations\201912201719365_PopulatePaymentTypes.designer.cs">
       <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912211048451_added_total_cost_to_order_class.cs" />
+    <Compile Include="Migrations\201912211048451_added_total_cost_to_order_class.designer.cs">
+      <DependentUpon>201912211048451_added_total_cost_to_order_class.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912211119387_modified_total_cost_data_type.cs" />
+    <Compile Include="Migrations\201912211119387_modified_total_cost_data_type.designer.cs">
+      <DependentUpon>201912211119387_modified_total_cost_data_type.cs</DependentUpon>
     <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.cs" />
     <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.designer.cs">
       <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
@@ -187,6 +208,11 @@
     <EmbeddedResource Include="Migrations\201912201719365_PopulatePaymentTypes.resx">
       <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912211048451_added_total_cost_to_order_class.resx">
+      <DependentUpon>201912211048451_added_total_cost_to_order_class.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912211119387_modified_total_cost_data_type.resx">
+      <DependentUpon>201912211119387_modified_total_cost_data_type.cs</DependentUpon>
     <EmbeddedResource Include="Migrations\201912210829028_addedNumberOfSoldToItem.resx">
       <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
     </EmbeddedResource>
