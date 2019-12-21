@@ -74,6 +74,7 @@
     <Content Include="API\CategoryService.svc" />
     <Content Include="API\ExampleService.svc" />
     <Content Include="API\OrderService.svc" />
+    <Content Include="API\ItemService.svc" />
     <Content Include="API\UserService.svc" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -88,6 +89,12 @@
     <Compile Include="API\ICategoryService.cs" />
     <Compile Include="API\IExampleService.cs" />
     <Compile Include="API\IOrderService.cs" />
+
+    <Compile Include="API\IItemService.cs" />
+    <Compile Include="API\ItemService.svc.cs">
+      <DependentUpon>ItemService.svc</DependentUpon>
+    </Compile>
+
     <Compile Include="API\IUserService.cs" />
     <Compile Include="API\OrderService.svc.cs">
       <DependentUpon>OrderService.svc</DependentUpon>
@@ -97,13 +104,19 @@
     </Compile>
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\ExampleBLL.cs" />
+
     <Compile Include="BLL\OrderBLL.cs" />
+
+    <Compile Include="BLL\ItemBLL.cs" />
+
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Context\OSContext.cs" />
     <Compile Include="DTOs\CategoryDTO.cs" />
     <Compile Include="DTOs\ExampleClientDTO.cs" />
     <Compile Include="DTOs\OrderDTO.cs" />
     <Compile Include="DTOs\PaymentTypeDTO.cs" />
+    <Compile Include="DTOs\ItemDTO.cs" />
+
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -143,6 +156,13 @@
     <Compile Include="Migrations\201912211119387_modified_total_cost_data_type.cs" />
     <Compile Include="Migrations\201912211119387_modified_total_cost_data_type.designer.cs">
       <DependentUpon>201912211119387_modified_total_cost_data_type.cs</DependentUpon>
+    <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.cs" />
+    <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.designer.cs">
+      <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.cs" />
+    <Compile Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.designer.cs">
+      <DependentUpon>201912210949592_ModifiedColumnsConstrintInItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -193,6 +213,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912211119387_modified_total_cost_data_type.resx">
       <DependentUpon>201912211119387_modified_total_cost_data_type.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912210829028_addedNumberOfSoldToItem.resx">
+      <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.resx">
+      <DependentUpon>201912210949592_ModifiedColumnsConstrintInItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
