@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OSBE.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,8 +14,12 @@ namespace OSBE.DTOs
         public string Zip { get; set; }
         public string Country { get; set; }
         public string City { get; set; }
-        public int PaymentID { get; set; }
-        public int UserID { get; set; }
-        public List <KeyValuePair<int,int>> products;
+        public List <KeyValuePair<int,int>> products { get; set; }
+        public PaymentTypeDTO paymentType { get; set; }
+        public UserDTO user { get; set; } 
+        public OrderDTO ()
+        {
+            products = new List<KeyValuePair<int, int>>();
+        }
     }
 }

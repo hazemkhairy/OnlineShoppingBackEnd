@@ -24,13 +24,12 @@ namespace OSBE.API
         }
        public  OrderDTO GetOrder(string orderID)
         {
-            return null;
-            //return OrderBLL.GetOrder(orderID);
+            
+            return OrderBLL.GetOrder(orderID);
         }
         public List<OrderDTO> GetAll(string userID)
         {
-            return null;
-            //return OrderBLL.GetAll(userID);
+            return OrderBLL.GetAll(userID);
         }
     }
 }

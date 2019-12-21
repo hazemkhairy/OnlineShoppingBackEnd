@@ -103,6 +103,7 @@
     <Compile Include="DTOs\CategoryDTO.cs" />
     <Compile Include="DTOs\ExampleClientDTO.cs" />
     <Compile Include="DTOs\OrderDTO.cs" />
+    <Compile Include="DTOs\PaymentTypeDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
