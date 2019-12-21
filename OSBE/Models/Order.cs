@@ -28,7 +28,8 @@ namespace OSBE.Models
         public PaymentType PaymentType { get; set; }
         [Required]
         public int PaymentTypeID { get; set; }
-
+        [Required]
+        public double TotalCost { get; set; }
 
         [Required]
         public User User { get; set; }
