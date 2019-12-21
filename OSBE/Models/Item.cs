@@ -11,21 +11,23 @@ namespace OSBE.Models
         public int ID { get; set; }
 
         [Required]
-        [MaxLength(60)]
+        [MaxLength(100)]
         public string Name { get; set; }
 
         [Required]
         public double Cost { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [MaxLength(1000)]
         public string Descripition { get; set; }
 
         [Required]
         public string ImageURL { get; set; }
-
+        [Required]
         public Category Category { get; set; }
         [Required]
         public int CategoryID { get; set; }
+        [Required]
+        public int NumberOfSold { get; set; }
     }
 }

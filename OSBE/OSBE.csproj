@@ -73,6 +73,7 @@
   <ItemGroup>
     <Content Include="API\CategoryService.svc" />
     <Content Include="API\ExampleService.svc" />
+    <Content Include="API\ItemService.svc" />
     <Content Include="API\UserService.svc" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -86,16 +87,22 @@
     </Compile>
     <Compile Include="API\ICategoryService.cs" />
     <Compile Include="API\IExampleService.cs" />
+    <Compile Include="API\IItemService.cs" />
+    <Compile Include="API\ItemService.svc.cs">
+      <DependentUpon>ItemService.svc</DependentUpon>
+    </Compile>
     <Compile Include="API\IUserService.cs" />
     <Compile Include="API\UserService.svc.cs">
       <DependentUpon>UserService.svc</DependentUpon>
     </Compile>
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\ExampleBLL.cs" />
+    <Compile Include="BLL\ItemBLL.cs" />
     <Compile Include="BLL\UserBLL.cs" />
     <Compile Include="Context\OSContext.cs" />
     <Compile Include="DTOs\CategoryDTO.cs" />
     <Compile Include="DTOs\ExampleClientDTO.cs" />
+    <Compile Include="DTOs\ItemDTO.cs" />
     <Compile Include="DTOs\UserDTO.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -127,6 +134,14 @@
     <Compile Include="Migrations\201912201719365_PopulatePaymentTypes.cs" />
     <Compile Include="Migrations\201912201719365_PopulatePaymentTypes.designer.cs">
       <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.cs" />
+    <Compile Include="Migrations\201912210829028_addedNumberOfSoldToItem.designer.cs">
+      <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.cs" />
+    <Compile Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.designer.cs">
+      <DependentUpon>201912210949592_ModifiedColumnsConstrintInItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Category.cs" />
@@ -171,6 +186,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912201719365_PopulatePaymentTypes.resx">
       <DependentUpon>201912201719365_PopulatePaymentTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912210829028_addedNumberOfSoldToItem.resx">
+      <DependentUpon>201912210829028_addedNumberOfSoldToItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912210949592_ModifiedColumnsConstrintInItem.resx">
+      <DependentUpon>201912210949592_ModifiedColumnsConstrintInItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
